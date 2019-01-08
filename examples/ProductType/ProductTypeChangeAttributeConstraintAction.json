@@ -1,15 +1,82 @@
-#%RAML 1.0 DataType
-# This file is auto-generated. Do not touch!
-(package): ProductType
-# yamllint disable-line rule:line-length
-(docs-uri): https://docs.commercetools.com/http-api-projects-productTypes.html#change-attributedefinition-attributeconstraint
-
-type: ProductTypeUpdateAction
-displayName: ProductTypeChangeAttributeConstraintAction
-discriminatorValue: changeAttributeConstraint
-
-properties:
-  attributeName:
-    type: string
-  newValue:
-    type: AttributeConstraintEnumDraft
+{
+  "action": "changeAttributeOrder",
+  "attributes": [{
+    "name": "ProductTypeAttribute",
+    "label": {
+      "de": "ProductTypeAttributeDE",
+      "en": "ProductTypeAttributeEN"
+    },
+    "isRequired": false,
+    "type": {
+      "name": "ltext"
+    },
+    "attributeConstraint": "None",
+    "isSearchable": true,
+    "inputHint": "MultiLine",
+    "displayGroup": "Other"
+  },
+    {
+      "name": "myAddedLeNumAttribute",
+      "label": {
+        "de": "addedAttributeDE",
+        "en": "addedAttributeEN"
+      },
+      "isRequired": false,
+      "type": {
+        "name": "lenum",
+        "values": [{
+          "key": "lenum1",
+          "label": {
+            "en": "lenumEN",
+            "de": "lenumDE"
+          }
+        },
+          {
+            "key": "lenum2",
+            "label": {
+              "en": "lenum2EN",
+              "de": "lenum2DE"
+            }
+          },
+          {
+            "key": "newleNumKey",
+            "label": {
+              "en": "newEnglishNumLabel",
+              "de": "newGermaneNumLabel"
+            }
+          }
+        ]
+      },
+      "attributeConstraint": "Unique",
+      "isSearchable": true,
+      "inputHint": "MultiLine",
+      "displayGroup": "Other"
+    },
+    {
+      "name": "myAddedENumAttribute",
+      "label": {
+        "en": "english",
+        "de": "german"
+      },
+      "inputTip": {
+        "de": "inputTipDE",
+        "en": "inputTipEN"
+      },
+      "isRequired": false,
+      "type": {
+        "name": "enum",
+        "values": [{
+          "key": "enum1",
+          "label": "enumlabel1"
+        }, {
+          "key": "enum2",
+          "label": "enumlabel2"
+        }]
+      },
+      "attributeConstraint": "Unique",
+      "isSearchable": true,
+      "inputHint": "MultiLine",
+      "displayGroup": "Other"
+    }
+  ]
+}

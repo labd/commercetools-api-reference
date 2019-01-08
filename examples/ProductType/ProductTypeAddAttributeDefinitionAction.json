@@ -1,13 +1,28 @@
-jup
-#%RAML 1.0 DataType
-# This file is auto-generated. Do not touch!
-(package): ProductType
-(docs-uri): https://docs.commercetools.com/http-api-projects-productTypes.html#add-attributedefinition
-
-type: ProductTypeUpdateAction
-displayName: ProductTypeAddAttributeDefinitionAction
-discriminatorValue: addAttributeDefinition
-
-properties:
-  attribute:
-    type: AttributeDefinitionDraft
+{
+  "action": "addAttributeDefinition",
+  "attribute": {
+    "name": "myAddedENumAttribute",
+    "isRequired": false,
+    "type": {
+      "name": "enum",
+      "values": [
+        {
+          "key": "enum1",
+          "label": "enumlabel1"
+        },
+        {
+          "key": "enum2",
+          "label": "enumlabel2"
+        }
+      ]
+    },
+    "label": {
+      "en": "addedAttributeEN",
+      "de": "addedAttributeDE"
+    },
+    "attributeConstraint": "Unique",
+    "isSearchable": true,
+    "inputHint": "MultiLine",
+    "displayGroup": "Other"
+  }
+}
