@@ -1,6 +1,10 @@
 #%RAML 1.0 DataType
 (package): Project
 
-type: UpdateAction
+(abstract): true
+type: object
 displayName: ProjectUpdateAction
 discriminator: action
+properties:
+    action:
+        type: string
