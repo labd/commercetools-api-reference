@@ -1,7 +1,10 @@
 #%RAML 1.0 DataType
 (package): Category
 
-
-type: UpdateAction
+(abstract): true
+type: object
 displayName: CategoryUpdateAction
 discriminator: action
+properties:
+    action:
+        type: string

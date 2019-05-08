@@ -1,4 +1,3 @@
-#PagedQueryResponse: !include PagedQueryResponse.raml
 CountryCode: !include common/CountryCode.raml
 CurrencyCode: !include common/CurrencyCode.raml
 Locale: !include common/Locale.raml
@@ -19,33 +18,40 @@ CartClassificationType: !include project/CartClassificationType.raml
 CartScoreType: !include project/CartScoreType.raml
 
 Asset: !include common/Asset.raml
+AssetDraft: !include common/AssetDraft.raml
 AssetSource: !include common/AssetSource.raml
 AssetDimensions: !include common/AssetDimensions.raml
+
 CustomFields: !include type/CustomFields.raml
+CustomFieldsDraft: !include type/CustomFieldsDraft.raml
 FieldContainer: !include type/FieldContainer.raml
 
-TypeReference: !include type/TypeReference.raml
 Reference: !include common/Reference.raml
 ResourceIdentifier: !include common/ResourceIdentifier.raml
 ReferenceTypeId: !include common/ReferenceTypeId.raml
 
 Type: !include type/Type.raml
-Resource: !include common/Resource.raml
+TypeReference: !include type/TypeReference.raml
+TypeResourceIdentifier: !include type/TypeResourceIdentifier.raml
 TypeUpdate: !include type/TypeUpdate.raml
 TypeUpdateAction: !include type/TypeUpdateAction.raml
+
+Resource: !include common/Resource.raml
 ResourceTypeId: !include type/ResourceTypeId.raml
 FieldDefinition: !include type/FieldDefinition.raml
 TypeTextInputHint: !include type/TypeTextInputHint.raml
+
 Category: !include category/Category.raml
 CategoryReference: !include category/CategoryReference.raml
 CategoryResourceIdentifier: !include category/CategoryResourceIdentifier.raml
+CategoryDraft: !include category/CategoryDraft.raml
 
-#CategoryDraft: !include category/CategoryDraft.raml
+#PagedQueryResponse: !include PagedQueryResponse.raml
 #CategoryPagedQueryResponse: !include category/CategoryPagedQueryResponse.raml
 
-#CategoryUpdate: !include category/CategoryUpdate.raml
-#CategoryUpdateAction: !include category/CategoryUpdateAction.raml
-#CategoryAddAssetAction: !include category/updates/CategoryAddAssetAction.raml
+CategoryUpdate: !include category/CategoryUpdate.raml
+CategoryUpdateAction: !include category/CategoryUpdateAction.raml
+CategoryAddAssetAction: !include category/updates/CategoryAddAssetAction.raml
 #CategoryChangeAssetNameAction: !include category/updates/CategoryChangeAssetNameAction.raml
 #CategoryChangeAssetOrderAction: !include category/updates/CategoryChangeAssetOrderAction.raml
 #CategoryChangeNameAction: !include category/updates/CategoryChangeNameAction.raml
@@ -228,7 +234,6 @@ CategoryResourceIdentifier: !include category/CategoryResourceIdentifier.raml
 #ChannelSetRolesAction: !include channel/updates/ChannelSetRolesAction.raml
 #Address: !include common/Address.raml
 
-#AssetDraft: !include common/AssetDraft.raml
 #CentPrecisionMoney: !include common/CentPrecisionMoney.raml
 #CountryCode: !include common/CountryCode.raml
 #CurrencyCode: !include common/CurrencyCode.raml
@@ -1047,7 +1052,6 @@ CategoryResourceIdentifier: !include category/CategoryResourceIdentifier.raml
 #CustomFieldSetType: !include type/CustomFieldSetType.raml
 #CustomFieldStringType: !include type/CustomFieldStringType.raml
 #CustomFieldTimeType: !include type/CustomFieldTimeType.raml
-#CustomFieldsDraft: !include type/CustomFieldsDraft.raml
 #FieldType: !include type/FieldType.raml
 
 #TypeDraft: !include type/TypeDraft.raml
@@ -2084,7 +2088,6 @@ CategoryResourceIdentifier: !include category/CategoryResourceIdentifier.raml
 #Type: !include type/Type.raml
 #TypeDraft: !include type/TypeDraft.raml
 #TypePagedQueryResponse: !include type/TypePagedQueryResponse.raml
-#TypeReference: !include type/TypeReference.raml
 #TypeTextInputHint: !include type/TypeTextInputHint.raml
 #TypeUpdate: !include type/TypeUpdate.raml
 #TypeUpdateAction: !include type/TypeUpdateAction.raml
