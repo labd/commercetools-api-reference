@@ -18,15 +18,15 @@ CartValueType: !include project/CartValueType.raml
 CartClassificationType: !include project/CartClassificationType.raml
 CartScoreType: !include project/CartScoreType.raml
 
-#Asset: !include common/Asset.raml
+Asset: !include common/Asset.raml
 AssetSource: !include common/AssetSource.raml
 AssetDimensions: !include common/AssetDimensions.raml
-#CustomFields: !include type/CustomFields.raml
+CustomFields: !include type/CustomFields.raml
 FieldContainer: !include type/FieldContainer.raml
 
 TypeReference: !include type/TypeReference.raml
 Reference: !include common/Reference.raml
-#ResourceIdentifier: !include common/ResourceIdentifier.raml
+ResourceIdentifier: !include common/ResourceIdentifier.raml
 ReferenceTypeId: !include common/ReferenceTypeId.raml
 
 Type: !include type/Type.raml
@@ -36,9 +36,37 @@ TypeUpdateAction: !include type/TypeUpdateAction.raml
 ResourceTypeId: !include type/ResourceTypeId.raml
 FieldDefinition: !include type/FieldDefinition.raml
 TypeTextInputHint: !include type/TypeTextInputHint.raml
-#Category: !include category/Category.raml
-#CategoryReference: !include category/CategoryReference.raml
+Category: !include category/Category.raml
+CategoryReference: !include category/CategoryReference.raml
+CategoryResourceIdentifier: !include category/CategoryResourceIdentifier.raml
 
+#CategoryDraft: !include category/CategoryDraft.raml
+#CategoryPagedQueryResponse: !include category/CategoryPagedQueryResponse.raml
+
+#CategoryUpdate: !include category/CategoryUpdate.raml
+#CategoryUpdateAction: !include category/CategoryUpdateAction.raml
+#CategoryAddAssetAction: !include category/updates/CategoryAddAssetAction.raml
+#CategoryChangeAssetNameAction: !include category/updates/CategoryChangeAssetNameAction.raml
+#CategoryChangeAssetOrderAction: !include category/updates/CategoryChangeAssetOrderAction.raml
+#CategoryChangeNameAction: !include category/updates/CategoryChangeNameAction.raml
+#CategoryChangeOrderHintAction: !include category/updates/CategoryChangeOrderHintAction.raml
+#CategoryChangeParentAction: !include category/updates/CategoryChangeParentAction.raml
+#CategoryChangeSlugAction: !include category/updates/CategoryChangeSlugAction.raml
+#CategoryRemoveAssetAction: !include category/updates/CategoryRemoveAssetAction.raml
+#CategorySetAssetCustomFieldAction: !include category/updates/CategorySetAssetCustomFieldAction.raml
+#CategorySetAssetCustomTypeAction: !include category/updates/CategorySetAssetCustomTypeAction.raml
+#CategorySetAssetDescriptionAction: !include category/updates/CategorySetAssetDescriptionAction.raml
+#CategorySetAssetKeyAction: !include category/updates/CategorySetAssetKeyAction.raml
+#CategorySetAssetSourcesAction: !include category/updates/CategorySetAssetSourcesAction.raml
+#CategorySetAssetTagsAction: !include category/updates/CategorySetAssetTagsAction.raml
+#CategorySetCustomFieldAction: !include category/updates/CategorySetCustomFieldAction.raml
+#CategorySetCustomTypeAction: !include category/updates/CategorySetCustomTypeAction.raml
+#CategorySetDescriptionAction: !include category/updates/CategorySetDescriptionAction.raml
+#CategorySetExternalIdAction: !include category/updates/CategorySetExternalIdAction.raml
+#CategorySetKeyAction: !include category/updates/CategorySetKeyAction.raml
+#CategorySetMetaDescriptionAction: !include category/updates/CategorySetMetaDescriptionAction.raml
+#CategorySetMetaKeywordsAction: !include category/updates/CategorySetMetaKeywordsAction.raml
+#CategorySetMetaTitleAction: !include category/updates/CategorySetMetaTitleAction.raml
 
 #Update: !include Update.raml
 #UpdateAction: !include UpdateAction.raml
@@ -181,33 +209,6 @@ TypeTextInputHint: !include type/TypeTextInputHint.raml
 #CartSetShippingRateInputAction: !include cart/updates/CartSetShippingRateInputAction.raml
 #CartUpdateItemShippingAddressAction: !include cart/updates/CartUpdateItemShippingAddressAction.raml
 
-#CategoryDraft: !include category/CategoryDraft.raml
-#CategoryPagedQueryResponse: !include category/CategoryPagedQueryResponse.raml
-
-#CategoryUpdate: !include category/CategoryUpdate.raml
-#CategoryUpdateAction: !include category/CategoryUpdateAction.raml
-#CategoryAddAssetAction: !include category/updates/CategoryAddAssetAction.raml
-#CategoryChangeAssetNameAction: !include category/updates/CategoryChangeAssetNameAction.raml
-#CategoryChangeAssetOrderAction: !include category/updates/CategoryChangeAssetOrderAction.raml
-#CategoryChangeNameAction: !include category/updates/CategoryChangeNameAction.raml
-#CategoryChangeOrderHintAction: !include category/updates/CategoryChangeOrderHintAction.raml
-#CategoryChangeParentAction: !include category/updates/CategoryChangeParentAction.raml
-#CategoryChangeSlugAction: !include category/updates/CategoryChangeSlugAction.raml
-#CategoryRemoveAssetAction: !include category/updates/CategoryRemoveAssetAction.raml
-#CategorySetAssetCustomFieldAction: !include category/updates/CategorySetAssetCustomFieldAction.raml
-#CategorySetAssetCustomTypeAction: !include category/updates/CategorySetAssetCustomTypeAction.raml
-#CategorySetAssetDescriptionAction: !include category/updates/CategorySetAssetDescriptionAction.raml
-#CategorySetAssetKeyAction: !include category/updates/CategorySetAssetKeyAction.raml
-#CategorySetAssetSourcesAction: !include category/updates/CategorySetAssetSourcesAction.raml
-#CategorySetAssetTagsAction: !include category/updates/CategorySetAssetTagsAction.raml
-#CategorySetCustomFieldAction: !include category/updates/CategorySetCustomFieldAction.raml
-#CategorySetCustomTypeAction: !include category/updates/CategorySetCustomTypeAction.raml
-#CategorySetDescriptionAction: !include category/updates/CategorySetDescriptionAction.raml
-#CategorySetExternalIdAction: !include category/updates/CategorySetExternalIdAction.raml
-#CategorySetKeyAction: !include category/updates/CategorySetKeyAction.raml
-#CategorySetMetaDescriptionAction: !include category/updates/CategorySetMetaDescriptionAction.raml
-#CategorySetMetaKeywordsAction: !include category/updates/CategorySetMetaKeywordsAction.raml
-#CategorySetMetaTitleAction: !include category/updates/CategorySetMetaTitleAction.raml
 #Channel: !include channel/Channel.raml
 #ChannelDraft: !include channel/ChannelDraft.raml
 #ChannelPagedQueryResponse: !include channel/ChannelPagedQueryResponse.raml
