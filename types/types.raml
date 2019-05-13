@@ -74,6 +74,10 @@ CategorySetMetaDescriptionAction: !include category/updates/CategorySetMetaDescr
 CategorySetMetaKeywordsAction: !include category/updates/CategorySetMetaKeywordsAction.raml
 CategorySetMetaTitleAction: !include category/updates/CategorySetMetaTitleAction.raml
 
+ErrorResponse: !include error/ErrorResponse.raml
+ErrorObject: !include error/ErrorObject.raml
+
+
 #Update: !include Update.raml
 #UpdateAction: !include UpdateAction.raml
 
@@ -335,8 +339,6 @@ CategorySetMetaTitleAction: !include category/updates/CategorySetMetaTitleAction
 #DuplicatePriceScopeError: !include error/DuplicatePriceScopeError.raml
 #DuplicateVariantValuesError: !include error/DuplicateVariantValuesError.raml
 #EnumValueIsUsedError: !include error/EnumValueIsUsedError.raml
-#ErrorObject: !include error/ErrorObject.raml
-#ErrorResponse: !include error/ErrorResponse.raml
 #ExtensionBadResponseError: !include error/ExtensionBadResponseError.raml
 #ExtensionNoResponseError: !include error/ExtensionNoResponseError.raml
 #ExtensionUpdateActionsFailedError: !include error/ExtensionUpdateActionsFailedError.raml
