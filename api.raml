@@ -114,6 +114,7 @@ resourceTypes:
   displayName: Project
   description: The Project endpoint is used to retrieve certain information from a project.
   get:
+    (commandName): ProjectGet
     description: |
       The Endpoint is responding a limited set of information about settings and configuration of the project.
     securedBy: [oauth_2_0: {scopes: ["manage_project:{projectKey}"]}]
@@ -123,6 +124,7 @@ resourceTypes:
           example: !include examples/project.example.json
           type: Project
   post:
+    (commandName): ProjectUpdateCommand
     is:
       - conflicting
     description: Update project

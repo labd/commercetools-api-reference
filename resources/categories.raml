@@ -10,8 +10,10 @@ type:
     sortExample: name.en asc
 description: Categories are used to organize products in a hierarchical structure.
 get:
+  (commandName): CategoryQuery
   securedBy: [oauth_2_0: {scopes: ["manage_project:{projectKey}", "view_products:{projectKey}"]}]
 post:
+  (commandName): CategoryCreateCommand
   securedBy: [oauth_2_0: {scopes: ["manage_project:{projectKey}", "manage_products:{projectKey}"]}]
 /key={key}:
   (methodName): withKey
@@ -23,10 +25,13 @@ post:
       resourceExample: !include ../examples/category.example.json
       resourceUpdateExample: !include ../examples/category-update.example.json
   get:
+    (commandName): CategoryByKeyGet
     securedBy: [oauth_2_0: {scopes: ["manage_project:{projectKey}", "view_products:{projectKey}"]}]
   post:
+    (commandName): CategoryByKeyUpdateCommand
     securedBy: [oauth_2_0: {scopes: ["manage_project:{projectKey}", "manage_products:{projectKey}"]}]
   delete:
+    (commandName): CategoryByKeyDeleteCommand
     securedBy: [oauth_2_0: {scopes: ["manage_project:{projectKey}", "manage_products:{projectKey}"]}]
 /{ID}:
   (methodName): withId
@@ -40,8 +45,11 @@ post:
       readScopes: ["manage_project:{projectKey}", "view_products:{projectKey}"]
       writeScopes: ["manage_project:{projectKey}", "manage_products:{projectKey}"]
   get:
+    (commandName): CategoryByIdGet
     securedBy: [oauth_2_0: {scopes: ["manage_project:{projectKey}", "view_products:{projectKey}"]}]
   post:
+    (commandName): CategoryByIdUpdateCommand
     securedBy: [oauth_2_0: {scopes: ["manage_project:{projectKey}", "manage_products:{projectKey}"]}]
   delete:
+    (commandName): CategoryByIdDeleteCommand
     securedBy: [oauth_2_0: {scopes: ["manage_project:{projectKey}", "manage_products:{projectKey}"]}]
