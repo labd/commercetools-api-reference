@@ -77,6 +77,62 @@ CategorySetMetaTitleAction: !include category/updates/CategorySetMetaTitleAction
 ErrorResponse: !include error/ErrorResponse.raml
 ErrorObject: !include error/ErrorObject.raml
 
+Product: !include product/Product.raml
+ProductTypeReference: !include product-type/ProductTypeReference.raml
+ProductType: !include product-type/ProductType.raml
+AttributeDefinition: !include product-type/AttributeDefinition.raml
+AttributeConstraintEnum: !include product-type/AttributeConstraintEnum.raml
+TextInputHint: !include product-type/TextInputHint.raml
+ProductCatalogData: !include product/ProductCatalogData.raml
+ProductData: !include product/ProductData.raml
+TaxCategoryReference: !include tax-category/TaxCategoryReference.raml
+StateReference: !include state/StateReference.raml
+ReviewRatingStatistics: !include review/ReviewRatingStatistics.raml
+AttributeType: !include product-type/AttributeType.raml
+CategoryOrderHints: !include product/CategoryOrderHints.raml
+ProductVariant: !include product/ProductVariant.raml
+SearchKeywords: !include product/SearchKeywords.raml
+Price: !include common/Price.raml
+Attribute: !include product/Attribute.raml
+Image: !include common/Image.raml
+ProductVariantAvailability: !include product/ProductVariantAvailability.raml
+ScopedPrice: !include common/ScopedPrice.raml
+Money: !include common/Money.raml
+ChannelReference: !include channel/ChannelReference.raml
+DiscountedPrice: !include common/DiscountedPrice.raml
+PriceTier: !include common/PriceTier.raml
+ImageDimensions: !include common/ImageDimensions.raml
+ProductVariantChannelAvailabilityMap: !include product/ProductVariantChannelAvailabilityMap.raml
+TypedMoney: !include common/TypedMoney.raml
+Channel: !include channel/Channel.raml
+ProductDiscountReference: !include product-discount/ProductDiscountReference.raml
+ProductVariantChannelAvailability: !include product/ProductVariantChannelAvailability.raml
+MoneyType: !include common/MoneyType.raml
+ChannelRoleEnum: !include channel/ChannelRoleEnum.raml
+Address: !include common/Address.raml
+GeoJson: !include common/GeoJson.raml
+ProductDiscount: !include product-discount/ProductDiscount.raml
+ProductDiscountValue: !include product-discount/ProductDiscountValue.raml
+TaxCategory: !include tax-category/TaxCategory.raml
+TaxRate: !include tax-category/TaxRate.raml
+SubRate: !include tax-category/SubRate.raml
+State: !include state/State.raml
+StateTypeEnum: !include state/StateTypeEnum.raml
+StateRoleEnum: !include state/StateRoleEnum.raml
+SearchKeyword: !include product/SearchKeyword.raml
+CustomerGroupReference: !include customer-group/CustomerGroupReference.raml
+CustomerGroup: !include customer-group/CustomerGroup.raml
+SuggestTokenizer: !include product/SuggestTokenizer.raml
+
+ObjectReference: !include common/ObjectReference.raml
+ProductPagedQueryResponse: !include product/ProductPagedQueryResponse.raml
+ProductDraft: !include product/ProductDraft.raml
+ProductUpdate: !include product/ProductUpdate.raml
+ProductUpdateAction: !include product/ProductUpdateAction.raml
+ProductVariantDraft: !include product/ProductVariantDraft.raml
+PriceDraft: !include common/PriceDraft.raml
+
+
 #Update: !include Update.raml
 #UpdateAction: !include UpdateAction.raml
 
@@ -217,11 +273,9 @@ ErrorObject: !include error/ErrorObject.raml
 #CartSetShippingRateInputAction: !include cart/updates/CartSetShippingRateInputAction.raml
 #CartUpdateItemShippingAddressAction: !include cart/updates/CartUpdateItemShippingAddressAction.raml
 
-#Channel: !include channel/Channel.raml
+
 #ChannelDraft: !include channel/ChannelDraft.raml
 #ChannelPagedQueryResponse: !include channel/ChannelPagedQueryResponse.raml
-#ChannelReference: !include channel/ChannelReference.raml
-#ChannelRoleEnum: !include channel/ChannelRoleEnum.raml
 #ChannelUpdate: !include channel/ChannelUpdate.raml
 #ChannelUpdateAction: !include channel/ChannelUpdateAction.raml
 #ChannelAddRolesAction: !include channel/updates/ChannelAddRolesAction.raml
@@ -234,33 +288,18 @@ ErrorObject: !include error/ErrorObject.raml
 #ChannelSetCustomTypeAction: !include channel/updates/ChannelSetCustomTypeAction.raml
 #ChannelSetGeoLocationAction: !include channel/updates/ChannelSetGeoLocationAction.raml
 #ChannelSetRolesAction: !include channel/updates/ChannelSetRolesAction.raml
-#Address: !include common/Address.raml
+
 
 #CentPrecisionMoney: !include common/CentPrecisionMoney.raml
-#CountryCode: !include common/CountryCode.raml
-#CurrencyCode: !include common/CurrencyCode.raml
-#DiscountedPrice: !include common/DiscountedPrice.raml
-#GeoJson: !include common/GeoJson.raml
 #GeoJsonPoint: !include common/GeoJsonPoint.raml
 #HighPrecisionMoney: !include common/HighPrecisionMoney.raml
-#Image: !include common/Image.raml
-#ImageDimensions: !include common/ImageDimensions.raml
 #Locale: !include common/Locale.raml
-#Money: !include common/Money.raml
-#MoneyType: !include common/MoneyType.raml
-#Price: !include common/Price.raml
-#PriceDraft: !include common/PriceDraft.raml
-#PriceTier: !include common/PriceTier.raml
-#ScopedPrice: !include common/ScopedPrice.raml
-#TypedMoney: !include common/TypedMoney.raml
 #CustomObject: !include custom-object/CustomObject.raml
 #CustomObjectDraft: !include custom-object/CustomObjectDraft.raml
 #CustomObjectPagedQueryResponse: !include custom-object/CustomObjectPagedQueryResponse.raml
 #CustomObjectReference: !include custom-object/CustomObjectReference.raml
-#CustomerGroup: !include customer-group/CustomerGroup.raml
 #CustomerGroupDraft: !include customer-group/CustomerGroupDraft.raml
 #CustomerGroupPagedQueryResponse: !include customer-group/CustomerGroupPagedQueryResponse.raml
-#CustomerGroupReference: !include customer-group/CustomerGroupReference.raml
 #CustomerGroupUpdate: !include customer-group/CustomerGroupUpdate.raml
 #CustomerGroupUpdateAction: !include customer-group/CustomerGroupUpdateAction.raml
 #CustomerGroupChangeNameAction: !include customer-group/updates/CustomerGroupChangeNameAction.raml
@@ -738,14 +777,11 @@ ErrorObject: !include error/ErrorObject.raml
 #PaymentSetStatusInterfaceCodeAction: !include payment/updates/PaymentSetStatusInterfaceCodeAction.raml
 #PaymentSetStatusInterfaceTextAction: !include payment/updates/PaymentSetStatusInterfaceTextAction.raml
 #PaymentTransitionStateAction: !include payment/updates/PaymentTransitionStateAction.raml
-#ProductDiscount: !include product-discount/ProductDiscount.raml
 #ProductDiscountDraft: !include product-discount/ProductDiscountDraft.raml
 #ProductDiscountMatchQuery: !include product-discount/ProductDiscountMatchQuery.raml
 #ProductDiscountPagedQueryResponse: !include product-discount/ProductDiscountPagedQueryResponse.raml
-#ProductDiscountReference: !include product-discount/ProductDiscountReference.raml
 #ProductDiscountUpdate: !include product-discount/ProductDiscountUpdate.raml
 #ProductDiscountUpdateAction: !include product-discount/ProductDiscountUpdateAction.raml
-#ProductDiscountValue: !include product-discount/ProductDiscountValue.raml
 #ProductDiscountValueAbsolute: !include product-discount/ProductDiscountValueAbsolute.raml
 #ProductDiscountValueExternal: !include product-discount/ProductDiscountValueExternal.raml
 #ProductDiscountValueRelative: !include product-discount/ProductDiscountValueRelative.raml
@@ -760,11 +796,9 @@ ErrorObject: !include error/ErrorObject.raml
 #ProductDiscountSetValidFromAndUntilAction: !include product-discount/updates/ProductDiscountSetValidFromAndUntilAction.raml
 #ProductDiscountSetValidUntilAction: !include product-discount/updates/ProductDiscountSetValidUntilAction.raml
 #AttributeBooleanType: !include product-type/AttributeBooleanType.raml
-#AttributeConstraintEnum: !include product-type/AttributeConstraintEnum.raml
 #AttributeConstraintEnumDraft: !include product-type/AttributeConstraintEnumDraft.raml
 #AttributeDateTimeType: !include product-type/AttributeDateTimeType.raml
 #AttributeDateType: !include product-type/AttributeDateType.raml
-#AttributeDefinition: !include product-type/AttributeDefinition.raml
 #AttributeDefinitionDraft: !include product-type/AttributeDefinitionDraft.raml
 #AttributeEnumType: !include product-type/AttributeEnumType.raml
 #AttributeLocalizableTextType: !include product-type/AttributeLocalizableTextType.raml
@@ -778,14 +812,10 @@ ErrorObject: !include error/ErrorObject.raml
 #AttributeSetType: !include product-type/AttributeSetType.raml
 #AttributeTextType: !include product-type/AttributeTextType.raml
 #AttributeTimeType: !include product-type/AttributeTimeType.raml
-#AttributeType: !include product-type/AttributeType.raml
-#ProductType: !include product-type/ProductType.raml
 #ProductTypeDraft: !include product-type/ProductTypeDraft.raml
 #ProductTypePagedQueryResponse: !include product-type/ProductTypePagedQueryResponse.raml
-#ProductTypeReference: !include product-type/ProductTypeReference.raml
 #ProductTypeUpdate: !include product-type/ProductTypeUpdate.raml
 #ProductTypeUpdateAction: !include product-type/ProductTypeUpdateAction.raml
-#TextInputHint: !include product-type/TextInputHint.raml
 #ProductTypeAddAttributeDefinitionAction: !include product-type/updates/ProductTypeAddAttributeDefinitionAction.raml
 #ProductTypeAddLocalizedEnumValueAction: !include product-type/updates/ProductTypeAddLocalizedEnumValueAction.raml
 #ProductTypeAddPlainEnumValueAction: !include product-type/updates/ProductTypeAddPlainEnumValueAction.raml
@@ -814,9 +844,7 @@ ErrorObject: !include error/ErrorObject.raml
 #ProductTypeRemoveEnumValuesAction: !include product-type/updates/ProductTypeRemoveEnumValuesAction.raml
 #ProductTypeSetInputTipAction: !include product-type/updates/ProductTypeSetInputTipAction.raml
 #ProductTypeSetKeyAction: !include product-type/updates/ProductTypeSetKeyAction.raml
-#Attribute: !include product/Attribute.raml
 #AttributeValue: !include product/AttributeValue.raml
-#CategoryOrderHints: !include product/CategoryOrderHints.raml
 #CustomTokenizer: !include product/CustomTokenizer.raml
 #FacetResult: !include product/FacetResult.raml
 #FacetResultRange: !include product/FacetResultRange.raml
@@ -824,27 +852,12 @@ ErrorObject: !include error/ErrorObject.raml
 #FacetResults: !include product/FacetResults.raml
 #FacetTypes: !include product/FacetTypes.raml
 #FilteredFacetResult: !include product/FilteredFacetResult.raml
-#Product: !include product/Product.raml
-#ProductCatalogData: !include product/ProductCatalogData.raml
-#ProductData: !include product/ProductData.raml
-#ProductDraft: !include product/ProductDraft.raml
-#ProductPagedQueryResponse: !include product/ProductPagedQueryResponse.raml
 #ProductProjection: !include product/ProductProjection.raml
 #ProductProjectionPagedQueryResponse: !include product/ProductProjectionPagedQueryResponse.raml
 #ProductProjectionPagedSearchResponse: !include product/ProductProjectionPagedSearchResponse.raml
 #ProductPublishScope: !include product/ProductPublishScope.raml
 #ProductReference: !include product/ProductReference.raml
-#ProductUpdate: !include product/ProductUpdate.raml
-#ProductUpdateAction: !include product/ProductUpdateAction.raml
-#ProductVariant: !include product/ProductVariant.raml
-#ProductVariantAvailability: !include product/ProductVariantAvailability.raml
-#ProductVariantChannelAvailability: !include product/ProductVariantChannelAvailability.raml
-#ProductVariantChannelAvailabilityMap: !include product/ProductVariantChannelAvailabilityMap.raml
-#ProductVariantDraft: !include product/ProductVariantDraft.raml
 #RangeFacetResult: !include product/RangeFacetResult.raml
-#SearchKeyword: !include product/SearchKeyword.raml
-#SearchKeywords: !include product/SearchKeywords.raml
-#SuggestTokenizer: !include product/SuggestTokenizer.raml
 #Suggestion: !include product/Suggestion.raml
 #SuggestionResult: !include product/SuggestionResult.raml
 #TermFacetResult: !include product/TermFacetResult.raml
@@ -899,7 +912,6 @@ ErrorObject: !include error/ErrorObject.raml
 #Review: !include review/Review.raml
 #ReviewDraft: !include review/ReviewDraft.raml
 #ReviewPagedQueryResponse: !include review/ReviewPagedQueryResponse.raml
-#ReviewRatingStatistics: !include review/ReviewRatingStatistics.raml
 #ReviewReference: !include review/ReviewReference.raml
 #ReviewUpdate: !include review/ReviewUpdate.raml
 #ReviewUpdateAction: !include review/ReviewUpdateAction.raml
@@ -979,12 +991,8 @@ ErrorObject: !include error/ErrorObject.raml
 #ShoppingListSetTextLineItemCustomTypeAction: !include shopping-list/updates/ShoppingListSetTextLineItemCustomTypeAction.raml
 ## yamllint disable-line rule:line-length
 #ShoppingListSetTextLineItemDescriptionAction: !include shopping-list/updates/ShoppingListSetTextLineItemDescriptionAction.raml
-#State: !include state/State.raml
 #StateDraft: !include state/StateDraft.raml
 #StatePagedQueryResponse: !include state/StatePagedQueryResponse.raml
-#StateReference: !include state/StateReference.raml
-#StateRoleEnum: !include state/StateRoleEnum.raml
-#StateTypeEnum: !include state/StateTypeEnum.raml
 #StateUpdate: !include state/StateUpdate.raml
 #StateUpdateAction: !include state/StateUpdateAction.raml
 #StateAddRolesAction: !include state/updates/StateAddRolesAction.raml
@@ -1024,14 +1032,10 @@ ErrorObject: !include error/ErrorObject.raml
 #SubscriptionSetChangesAction: !include subscription/updates/SubscriptionSetChangesAction.raml
 #SubscriptionSetKeyAction: !include subscription/updates/SubscriptionSetKeyAction.raml
 #SubscriptionSetMessagesAction: !include subscription/updates/SubscriptionSetMessagesAction.raml
-#SubRate: !include tax-category/SubRate.raml
-#TaxCategory: !include tax-category/TaxCategory.raml
 #TaxCategoryDraft: !include tax-category/TaxCategoryDraft.raml
 #TaxCategoryPagedQueryResponse: !include tax-category/TaxCategoryPagedQueryResponse.raml
-#TaxCategoryReference: !include tax-category/TaxCategoryReference.raml
 #TaxCategoryUpdate: !include tax-category/TaxCategoryUpdate.raml
 #TaxCategoryUpdateAction: !include tax-category/TaxCategoryUpdateAction.raml
-#TaxRate: !include tax-category/TaxRate.raml
 #TaxRateDraft: !include tax-category/TaxRateDraft.raml
 #TaxCategoryAddTaxRateAction: !include tax-category/updates/TaxCategoryAddTaxRateAction.raml
 #TaxCategoryChangeNameAction: !include tax-category/updates/TaxCategoryChangeNameAction.raml
@@ -1228,7 +1232,6 @@ ErrorObject: !include error/ErrorObject.raml
 #ChannelSetGeoLocationAction: !include channel/updates/ChannelSetGeoLocationAction.raml
 #ChannelSetRolesAction: !include channel/updates/ChannelSetRolesAction.raml
 #Address: !include common/Address.raml
-#Asset: !include common/Asset.raml
 #AssetDimensions: !include common/AssetDimensions.raml
 #AssetDraft: !include common/AssetDraft.raml
 #AssetSource: !include common/AssetSource.raml
@@ -1780,10 +1783,8 @@ ErrorObject: !include error/ErrorObject.raml
 #ProductType: !include product-type/ProductType.raml
 #ProductTypeDraft: !include product-type/ProductTypeDraft.raml
 #ProductTypePagedQueryResponse: !include product-type/ProductTypePagedQueryResponse.raml
-#ProductTypeReference: !include product-type/ProductTypeReference.raml
 #ProductTypeUpdate: !include product-type/ProductTypeUpdate.raml
 #ProductTypeUpdateAction: !include product-type/ProductTypeUpdateAction.raml
-#TextInputHint: !include product-type/TextInputHint.raml
 #ProductTypeAddAttributeDefinitionAction: !include product-type/updates/ProductTypeAddAttributeDefinitionAction.raml
 #ProductTypeAddLocalizedEnumValueAction: !include product-type/updates/ProductTypeAddLocalizedEnumValueAction.raml
 #ProductTypeAddPlainEnumValueAction: !include product-type/updates/ProductTypeAddPlainEnumValueAction.raml
@@ -1812,7 +1813,6 @@ ErrorObject: !include error/ErrorObject.raml
 #ProductTypeRemoveEnumValuesAction: !include product-type/updates/ProductTypeRemoveEnumValuesAction.raml
 #ProductTypeSetInputTipAction: !include product-type/updates/ProductTypeSetInputTipAction.raml
 #ProductTypeSetKeyAction: !include product-type/updates/ProductTypeSetKeyAction.raml
-#Attribute: !include product/Attribute.raml
 #AttributeValue: !include product/AttributeValue.raml
 #CategoryOrderHints: !include product/CategoryOrderHints.raml
 #CustomTokenizer: !include product/CustomTokenizer.raml
@@ -1897,7 +1897,6 @@ ErrorObject: !include error/ErrorObject.raml
 #Review: !include review/Review.raml
 #ReviewDraft: !include review/ReviewDraft.raml
 #ReviewPagedQueryResponse: !include review/ReviewPagedQueryResponse.raml
-#ReviewRatingStatistics: !include review/ReviewRatingStatistics.raml
 #ReviewReference: !include review/ReviewReference.raml
 #ReviewUpdate: !include review/ReviewUpdate.raml
 #ReviewUpdateAction: !include review/ReviewUpdateAction.raml
@@ -1980,7 +1979,6 @@ ErrorObject: !include error/ErrorObject.raml
 #State: !include state/State.raml
 #StateDraft: !include state/StateDraft.raml
 #StatePagedQueryResponse: !include state/StatePagedQueryResponse.raml
-#StateReference: !include state/StateReference.raml
 #StateRoleEnum: !include state/StateRoleEnum.raml
 #StateTypeEnum: !include state/StateTypeEnum.raml
 #StateUpdate: !include state/StateUpdate.raml
@@ -2051,7 +2049,6 @@ ErrorObject: !include error/ErrorObject.raml
 #CustomFieldSetType: !include type/CustomFieldSetType.raml
 #CustomFieldStringType: !include type/CustomFieldStringType.raml
 #CustomFieldTimeType: !include type/CustomFieldTimeType.raml
-#CustomFields: !include type/CustomFields.raml
 #CustomFieldsDraft: !include type/CustomFieldsDraft.raml
 #FieldContainer: !include type/FieldContainer.raml
 #FieldDefinition: !include type/FieldDefinition.raml

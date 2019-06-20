@@ -12,10 +12,12 @@ description: |
   Products are the sellable goods in an e-commerce project on CTP. This document explains some design concepts
   of products on CTP and describes the available HTTP APIs for working with them.
 get:
+  (commandName): ProductQuery
   securedBy: [oauth_2_0: {scopes: ["manage_project:{projectKey}", "view_products:{projectKey}"]}]
   is:
     - priceSelecting
 post:
+  (commandName): ProductCreateCommand
   securedBy: [oauth_2_0: {scopes: ["manage_project:{projectKey}", "manage_products:{projectKey}"]}]
   is:
     - priceSelecting
@@ -25,18 +27,21 @@ post:
     baseResource:
       uriParameterName: key
       resourceType: Product
-      resourceUpdateType: Update
+      resourceUpdateType: ProductUpdate
       resourceUpdateExample: !include ../examples/product-update.example.json
       resourceExample: !include ../examples/product.example.json
   get:
+    (commandName): ProductByKeyGet
     securedBy: [oauth_2_0: {scopes: ["manage_project:{projectKey}", "view_products:{projectKey}"]}]
     is:
       - priceSelecting
   post:
+    (commandName): ProductByKeyUpdateCommand
     securedBy: [oauth_2_0: {scopes: ["manage_project:{projectKey}", "manage_products:{projectKey}"]}]
     is:
       - priceSelecting
   delete:
+    (commandName): ProductByKeyDeleteCommand
     securedBy: [oauth_2_0: {scopes: ["manage_project:{projectKey}", "manage_products:{projectKey}"]}]
     is:
       - priceSelecting
@@ -46,24 +51,28 @@ post:
     baseResource:
       uriParameterName: ID
       resourceType: Product
-      resourceUpdateType: Update
+      resourceUpdateType: ProductUpdate
       resourceUpdateExample: !include ../examples/product-update.example.json
       resourceExample: !include ../examples/product.example.json
   get:
+    (commandName): ProductByIdGet
     securedBy: [oauth_2_0: {scopes: ["manage_project:{projectKey}", "view_products:{projectKey}"]}]
     is:
       - priceSelecting
   post:
+    (commandName): ProductByKeyUpdateCommand
     securedBy: [oauth_2_0: {scopes: ["manage_project:{projectKey}", "manage_products:{projectKey}"]}]
     is:
       - priceSelecting
   delete:
+    (commandName): ProductByKeyDeleteCommand
     securedBy: [oauth_2_0: {scopes: ["manage_project:{projectKey}", "manage_products:{projectKey}"]}]
     is:
       - priceSelecting
   /images:
     displayName: Upload a product image
     post:
+      (commandName): ProductUploadImage
       queryParameters:
         filename?:
           type: string
